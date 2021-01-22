@@ -746,7 +746,6 @@ var characters = [
 //
 var gridCont = document.querySelector('.grid-container');
 var charKeys = document.querySelector('.character-keys');
-var charStatus = document.querySelector('.status');
 
 for (var i = 0; i <= characters.length; i++) {
 	gridCont.innerHTML +=
@@ -757,17 +756,14 @@ for (var i = 0; i <= characters.length; i++) {
 		characters[i].image +
 		'"></div><div class="character-keys"><p class="species">Species: ' +
 		characters[i].species +
-		'</p><p class="status">Status: ' +
+		'</p><p id="status" class="status">Status: ' +
 		characters[i].status +
 		'</p></div></div>';
 }
 
-for (var j = 0; j <= characters.length; j++) {
-	var statusDou;
-	if (characters[j].status === 'Dead') {
-		statusDou = 'pink';
-	} else {
-		statusDou = 'yellow';
-	}
-	document.getElementsByClassName('status').style.backgroundColor = 'lightblue';
-}
+// for (var j = 0; j <= characters.length; j++) {
+// 	var charStatus = document.querySelector('status');
+// 	if (characters[j].status === 'Dead') {
+// 		charStatus = '#00ccff';
+// 	}
+// }
