@@ -1,6 +1,6 @@
 var characters = [
 	{
-		id: 1,
+		id: 'id1',
 		name: 'Rick Sanchez',
 		status: 'Alive',
 		species: 'Human',
@@ -57,7 +57,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/1',
 	},
 	{
-		id: 2,
+		id: 'id2',
 		name: 'Morty Smith',
 		status: 'Alive',
 		species: 'Human',
@@ -114,7 +114,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/2',
 	},
 	{
-		id: 3,
+		id: 'id3',
 		name: 'Summer Smith',
 		status: 'Alive',
 		species: 'Human',
@@ -163,7 +163,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/3',
 	},
 	{
-		id: 4,
+		id: 'id4',
 		name: 'Beth Smith',
 		status: 'Alive',
 		species: 'Human',
@@ -220,7 +220,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/4',
 	},
 	{
-		id: 5,
+		id: 'id5',
 		name: 'Jerry Smith',
 		status: 'Alive',
 		species: 'Human',
@@ -265,7 +265,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/5',
 	},
 	{
-		id: 6,
+		id: 'id6',
 		name: 'Abadango Cluster Princess',
 		status: 'Alive',
 		species: 'Alien',
@@ -322,7 +322,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/6',
 	},
 	{
-		id: 7,
+		id: 'id7',
 		name: 'Abradolf Lincler',
 		status: 'unknown',
 		species: 'Human',
@@ -379,7 +379,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/7',
 	},
 	{
-		id: 8,
+		id: 'id8',
 		name: 'Adjudicator Rick',
 		status: 'Dead',
 		species: 'Human',
@@ -394,7 +394,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/8',
 	},
 	{
-		id: 9,
+		id: 'id9',
 		name: 'Agency Director',
 		status: 'Dead',
 		species: 'Human',
@@ -409,7 +409,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/9',
 	},
 	{
-		id: 10,
+		id: 'id10',
 		name: 'Alan Rails',
 		status: 'Dead',
 		species: 'Human',
@@ -424,7 +424,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/10',
 	},
 	{
-		id: 11,
+		id: 'id11',
 		name: 'Albert Einstein',
 		status: 'Dead',
 		species: 'Human',
@@ -439,7 +439,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/11',
 	},
 	{
-		id: 12,
+		id: 'id12',
 		name: 'Alexander',
 		status: 'Dead',
 		species: 'Human',
@@ -454,7 +454,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/12',
 	},
 	{
-		id: 13,
+		id: 'id13',
 		name: 'Alien Googah',
 		status: 'unknown',
 		species: 'Alien',
@@ -511,7 +511,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/13',
 	},
 	{
-		id: 14,
+		id: 'id14',
 		name: 'Alien Morty',
 		status: 'unknown',
 		species: 'Alien',
@@ -526,7 +526,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/14',
 	},
 	{
-		id: 15,
+		id: 'id15',
 		name: 'Alien Rick',
 		status: 'unknown',
 		species: 'Alien',
@@ -583,7 +583,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/15',
 	},
 	{
-		id: 16,
+		id: 'id16',
 		name: 'Amish Cyborg',
 		status: 'Dead',
 		species: 'Alien',
@@ -638,7 +638,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/16',
 	},
 	{
-		id: 17,
+		id: 'id17',
 		name: 'Annie',
 		status: 'Alive',
 		species: 'Human',
@@ -693,7 +693,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/17',
 	},
 	{
-		id: 18,
+		id: 'id18',
 		name: 'Antenna Morty',
 		status: 'Alive',
 		species: 'Human',
@@ -711,7 +711,7 @@ var characters = [
 		url: 'https://rickandmortyapi.com/api/character/18',
 	},
 	{
-		id: 19,
+		id: 'id19',
 		name: 'Antenna Rick',
 		status: 'unknown',
 		species: 'Human',
@@ -727,7 +727,7 @@ var characters = [
 		created: '2017-11-04T22:28:13.756Z',
 	},
 	{
-		id: 20,
+		id: 'id20',
 		name: 'Ants in my Eyes Johnson',
 		status: 'unknown',
 		species: 'Human',
@@ -756,7 +756,9 @@ for (var i = 0; i <= characters.length; i++) {
 		classType = 'unknownClass';
 	}
 	gridCont.innerHTML +=
-		'<div class="grid-child"><h2 class="character-headings">' +
+		'<div class="' +
+		characters[i].id +
+		'"><h2 class="character-headings">' +
 		characters[i].name +
 		'</h2>' +
 		'<div class="images-container"><img class="character-images" src="' +
