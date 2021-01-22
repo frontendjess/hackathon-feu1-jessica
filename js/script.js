@@ -761,9 +761,15 @@ for (var i = 0; i <= characters.length; i++) {
 		'</p></div></div>';
 }
 
-// for (var j = 0; j <= characters.length; j++) {
-// 	var charStatus = document.querySelector('status');
-// 	if (characters[j].status === 'Dead') {
-// 		charStatus = '#00ccff';
-// 	}
-// }
+for (var i = 0; i < characters.length; i++) {
+	var classType = '';
+	if (characters[i].status === 'alive') {
+		classType = 'aliveClass';
+	} else if (characters[i].status === 'dead') {
+		classType = 'deadClass';
+	} else {
+		classType = 'unknownClass';
+	}
+	document.getElementById('grid-container').innerHTML +=
+		'<div class="' + classType + '">Your html goes here</div>';
+}
