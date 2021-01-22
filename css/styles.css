@@ -1,0 +1,155 @@
+// netflix red: e50914
+// main font: helvetica
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000000;
+	width: 100%;
+	overflow-x: hidden;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	color: #ffffff;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+/* header */
+
+header {
+	width: 100%;
+}
+
+.desktop-nav {
+	width: 100%;
+}
+
+.nav-logo {
+	max-width: 100%;
+}
+
+/* main */
+
+main {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.grid-container {
+	width: 100%;
+	display: grid;
+	grid-template-areas:
+		'id-1 id-2 id-3 id-4'
+		'id-5 id-6 id-7 id-8'
+		'id-9 id-10 id-11 id-12'
+		'id-13 id-14 id-15 id-16'
+		'id-17 id-18 id-19 id-20';
+	/* border: solid 1px hotpink; */
+	grid-gap: 1.875rem;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.character-headings {
+	/* need to remove this background color and target with javascript instead */
+	background-color: #e50914;
+	padding: 10px;
+	margin-top: 0;
+}
+
+.grid-child {
+	/* border: solid 2px white; */
+	display: flex;
+	flex-direction: column;
+}
+
+.id-1 {
+	grid-area: id-1;
+}
+
+.id-2 {
+	grid-area: id-2;
+}
+
+.id-3 {
+	grid-area: id-3;
+}
+
+.id-4 {
+	grid-area: id-4;
+}
+
+.id-5 {
+	grid-area: id-5;
+}
+
+.id-6 {
+	grid-area: id-6;
+}
+
+.id-7 {
+	grid-area: id-7;
+}
+
+.id-8 {
+	grid-area: id-8;
+}
+
+.id-9 {
+	grid-area: id-9;
+}
+
+.id-10 {
+	grid-area: id-10;
+}
+
+.id-11 {
+	grid-area: id-11;
+}
+
+.id-12 {
+	grid-area: id-12;
+}
+
+.id-13 {
+	grid-area: id-13;
+}
+
+.id-14 {
+	grid-area: id-14;
+}
+
+.id-15 {
+	grid-area: id-15;
+}
+
+.id-16 {
+	grid-area: id-16;
+}
+
+.id-17 {
+	grid-area: id-17;
+}
+
+.id-18 {
+	grid-area: id-18;
+}
+
+.id-19 {
+	grid-area: id-19;
+}
+
+.id-20 {
+	grid-area: id-20;
+}
+
+.character-images {
+	max-width: 273px;
+	width: 100%;
+	display: block;
+}
