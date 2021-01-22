@@ -745,9 +745,16 @@ var characters = [
 
 //
 var gridCont = document.querySelector('.grid-container');
-var charKeys = document.querySelector('.character-keys');
 
 for (var i = 0; i <= characters.length; i++) {
+	var classType = '';
+	if (characters[i].status === 'Alive') {
+		classType = 'aliveClass';
+	} else if (characters[i].status === 'Dead') {
+		classType = 'deadClass';
+	} else {
+		classType = 'unknownClass';
+	}
 	gridCont.innerHTML +=
 		'<div class="grid-child"><h2 class="character-headings">' +
 		characters[i].name +
@@ -756,20 +763,12 @@ for (var i = 0; i <= characters.length; i++) {
 		characters[i].image +
 		'"></div><div class="character-keys"><p class="species">Species: ' +
 		characters[i].species +
-		'</p><p id="status" class="status">Status: ' +
+		'</p><p id="status" class="' +
+		classType +
+		'">Status: ' +
 		characters[i].status +
 		'</p></div></div>';
 }
 
-for (var i = 0; i < characters.length; i++) {
-	var classType = '';
-	if (characters[i].status === 'alive') {
-		classType = 'aliveClass';
-	} else if (characters[i].status === 'dead') {
-		classType = 'deadClass';
-	} else {
-		classType = 'unknownClass';
-	}
-	document.getElementById('grid-container').innerHTML +=
-		'<div class="' + classType + '">Your html goes here</div>';
-}
+// document.querySelector('.charStatus') +=
+// 	'<p class="' + classType + '">Your html goes here</p>';

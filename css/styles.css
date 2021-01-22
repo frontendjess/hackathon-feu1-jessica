@@ -68,6 +68,17 @@ main {
 	flex-direction: column;
 }
 
+.deadClass {
+	background-color: #303030;
+	padding: 5px;
+	font-style: italic;
+}
+
+.unknownClass {
+	background-color: #303030;
+	padding: 5px;
+}
+
 /* .id-1 {
 	grid-area: id-1;
 }
